@@ -149,7 +149,9 @@ public class WaypointGraph : MonoBehaviour
 						Vector3 from = waypoint.transform.position;
 						Vector3 to = neighbor.transform.position;
 						
-						//UnityEditor.Handles.DrawLine(from, to);
+						#if UNITY_EDITOR
+						UnityEditor.Handles.DrawLine(from, to);
+						#endif	
 					}
 				}
 			}
